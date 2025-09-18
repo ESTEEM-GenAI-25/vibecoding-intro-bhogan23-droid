@@ -5,52 +5,186 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Ben Hogan</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+    
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
     }
+    
     header {
-      background: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: #fff;
-      padding: 1rem 0;
+      padding: 2rem 0;
       text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
+    
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 300;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
     nav ul {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
       justify-content: center;
-      background: #444;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
+    
     nav ul li {
       margin: 0;
     }
+    
     nav ul li a {
       display: block;
-      padding: 1rem;
-      color: #fff;
+      padding: 1rem 1.5rem;
+      color: #333;
       text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
     }
+    
     nav ul li a:hover {
-      background: #666;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      transform: translateY(-2px);
     }
+    
+    nav ul li a[href="index.html"] {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
     main {
-      padding: 2rem;
-      max-width: 800px;
+      padding: 3rem 2rem;
+      max-width: 1000px;
       margin: auto;
       text-align: center;
     }
-    h1 {
-      text-align: center;
-    }
+    
     img.headshot {
-      width: 400px;
+      width: 300px;
       height: auto;
-      border-radius: 10%;
-      margin-top: 1rem;
+      border-radius: 50%;
+      margin: 2rem auto;
+      display: block;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      border: 5px solid rgba(255,255,255,0.8);
+    }
+    
+    img.headshot:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    
+    h2 {
+      color: #333;
+      font-size: 2.2rem;
+      font-weight: 300;
+      margin: 2rem 0 1.5rem 0;
+      position: relative;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 2px;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 700px;
+      margin: 1.5rem auto;
+      line-height: 1.8;
+    }
+    
+    .intro-card {
+      background: rgba(255,255,255,0.9);
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      margin: 2rem 0;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      nav ul {
+        flex-wrap: wrap;
+      }
+      
+      nav ul li a {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+      }
+      
+      main {
+        padding: 2rem 1rem;
+      }
+      
+      img.headshot {
+        width: 250px;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+      
+      .intro-card {
+        padding: 1.5rem;
+      }
+    }
+    
+    /* Animation for page load */
+    .intro-card {
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    img.headshot {
+      animation: fadeInUp 0.6s ease forwards;
+      animation-delay: 0.2s;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -72,9 +206,11 @@
 
   <main>
     <img src="Photos/headshot.jpg" alt="Ben Hogan Headshot" class="headshot">
-    <h2>Welcome!</h2>
-    <p>Hi, I’m Ben Hogan — a dual Master’s student in Engineering, Science & Technology Entrepreneurship (ESTEEM) at the University of Notre Dame and Mechanical Engineering with Business at University College Dublin. I’m passionate about technology, innovation, and using AI to solve real-world problems.</p>
-    <p>This site will showcase my education, experience, leadership, achievements, and skills.</p>
+    <div class="intro-card">
+      <h2>Welcome!</h2>
+      <p>Hi, I'm Ben Hogan — a dual Master's student in Engineering, Science & Technology Entrepreneurship (ESTEEM) at the University of Notre Dame and Mechanical Engineering with Business at University College Dublin. I'm passionate about technology, innovation, and using AI to solve real-world problems.</p>
+      <p>This site will showcase my education, experience, leadership, achievements, and skills.</p>
+    </div>
   </main>
 </body>
 </html>

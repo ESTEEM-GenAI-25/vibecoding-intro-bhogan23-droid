@@ -5,62 +5,218 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience - Ben Hogan</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+    
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
     }
+    
     header {
-      background: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: #fff;
-      padding: 1rem 0;
+      padding: 2rem 0;
       text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
+    
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 300;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
     nav ul {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
       justify-content: center;
-      background: #444;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
+    
     nav ul li {
       margin: 0;
     }
+    
     nav ul li a {
       display: block;
-      padding: 1rem;
-      color: #fff;
+      padding: 1rem 1.5rem;
+      color: #333;
       text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
     }
+    
     nav ul li a:hover {
-      background: #666;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      transform: translateY(-2px);
     }
+    
+    nav ul li a[href="experience.html"] {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
     main {
-      padding: 2rem;
-      max-width: 900px;
+      padding: 3rem 2rem;
+      max-width: 1200px;
       margin: auto;
     }
+    
     .job {
-      margin-bottom: 2.5rem;
-      overflow: auto; /* allows text to wrap around floated images */
+      margin-bottom: 3rem;
+      background: rgba(255,255,255,0.9);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
+    
+    .job::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .job:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .job:hover::before {
+      transform: scaleX(1);
+    }
+    
     .job h2 {
-      margin: 0;
+      margin: 0 0 0.5rem 0;
       color: #333;
+      font-size: 1.6rem;
+      font-weight: 600;
+      position: relative;
     }
+    
+    .job h2::after {
+      content: '💼';
+      position: absolute;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .job:hover h2::after {
+      opacity: 1;
+    }
+    
     .job h3 {
-      margin: 0.3rem 0;
-      color: #444;
+      margin: 0 0 1rem 0;
+      color: #667eea;
+      font-size: 1.1rem;
+      font-weight: 500;
     }
+    
+    .job p {
+      margin: 0.8rem 0;
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    
     .job img {
       float: right;
-      margin: 0.5rem 0 0.5rem 1rem;
-      width: 420px;   /* adjust size as needed */
+      margin: 0 0 1rem 2rem;
+      width: 350px;
       height: auto;
-      border-radius: 6px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 15px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      border: 3px solid rgba(255,255,255,0.8);
+    }
+    
+    .job img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      nav ul {
+        flex-wrap: wrap;
+      }
+      
+      nav ul li a {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+      }
+      
+      main {
+        padding: 2rem 1rem;
+      }
+      
+      .job {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      
+      .job img {
+        float: none;
+        display: block;
+        margin: 1rem auto 1.5rem auto;
+        width: 280px;
+      }
+      
+      .job h2 {
+        font-size: 1.4rem;
+      }
+      
+      .job h3 {
+        font-size: 1rem;
+      }
+    }
+    
+    /* Animation for page load */
+    .job {
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    .job:nth-child(1) { animation-delay: 0.1s; }
+    .job:nth-child(2) { animation-delay: 0.2s; }
+    .job:nth-child(3) { animation-delay: 0.3s; }
+    .job:nth-child(4) { animation-delay: 0.4s; }
+    .job:nth-child(5) { animation-delay: 0.5s; }
+    
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
