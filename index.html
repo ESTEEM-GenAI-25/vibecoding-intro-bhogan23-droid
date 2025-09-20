@@ -3,214 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Ben Hogan</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: linear-gradient(135deg, #c3cfe2 0%, #0f1419 50%, #1a2332 100%);
-      min-height: 100vh;
-      color: #e1e8f0;
-    }
-    
-    header {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      color: #fff;
-      padding: 2rem 0;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-    
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 300;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      background: rgba(30, 58, 95, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    nav ul li {
-      margin: 0;
-    }
-    
-    nav ul li a {
-      display: block;
-      padding: 1rem 1.5rem;
-      color: #e1e8f0;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-    
-    nav ul li a:hover {
-      background: linear-gradient(135deg, #0d4d7a 0%, #1e5a8a 100%);
-      color: white;
-      transform: translateY(-2px);
-    }
-    
-    nav ul li a[href="index.html"] {
-      background: linear-gradient(135deg, #0d4d7a 0%, #1e5a8a 100%);
-      color: white;
-    }
-    
-    main {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
-    }
-    
-    img.headshot {
-      width: 400px;
-      height: auto;
-      border-radius: 50%;
-      margin: 2rem auto;
-      display: block;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-      transition: all 0.3s ease;
-      border: 6px solid rgba(255,255,255,0.9);
-    }
-    
-    img.headshot:hover {
-      transform: scale(1.08);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
-    }
-    
-    h2 {
-      color: #e1e8f0;
-      font-size: 2.2rem;
-      font-weight: 300;
-      margin: 2rem 0 1.5rem 0;
-      position: relative;
-    }
-    
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 3px;
-      background: linear-gradient(135deg, #0d4d7a 0%, #1e5a8a 100%);
-      border-radius: 2px;
-    }
-    
-    p {
-      font-size: 1.1rem;
-      color: #b8c5d1;
-      max-width: 700px;
-      margin: 1.5rem auto;
-      line-height: 1.8;
-    }
-    
-    .intro-card {
-      background: rgba(30, 58, 95, 0.8);
-      padding: 2.5rem;
-      border-radius: 20px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-      margin: 2rem 0;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(45, 74, 107, 0.3);
-    }
-    
-    .contact-info {
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 2px solid rgba(45, 74, 107, 0.3);
-    }
-    
-    .contact-info h3 {
-      color: #e1e8f0;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
-    
-    .contact-info a {
-      color: #4a9eff;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    
-    .contact-info a:hover {
-      color: #7c3aed;
-    }
-    
-    /* Responsive design */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      
-      nav ul {
-        flex-wrap: wrap;
-      }
-      
-      nav ul li a {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-      }
-      
-      main {
-        padding: 2rem 1rem;
-      }
-      
-      img.headshot {
-        width: 300px;
-      }
-      
-      h2 {
-        font-size: 1.8rem;
-      }
-      
-      p {
-        font-size: 1rem;
-      }
-      
-      .intro-card {
-        padding: 1.5rem;
-      }
-    }
-    
-    /* Animation for page load */
-    .intro-card {
-      animation: fadeInUp 0.8s ease forwards;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    
-    img.headshot {
-      animation: fadeInUp 0.6s ease forwards;
-      animation-delay: 0.2s;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+  <title>Ben Hogan - Mechanical Engineer & ESTEEM Graduate Student | About</title>
+  <meta name="description" content="Ben Hogan is a Mechanical Engineer (MEng) who graduated 1st in his cohort at UCD, currently pursuing MSc in ESTEEM at University of Notre Dame. Specializing in GenAI, MedTech, and sustainable energy.">
+  <meta name="keywords" content="Ben Hogan, Mechanical Engineer, ESTEEM, Notre Dame, UCD, GenAI, MedTech, Energy Vault, FoodMarble, Naughton Fellowship">
+  <meta name="author" content="Ben Hogan">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benhogan.dev/">
+  <meta property="og:title" content="Ben Hogan - Mechanical Engineer & ESTEEM Graduate Student">
+  <meta property="og:description" content="Mechanical Engineer (MEng) who graduated 1st in cohort at UCD, currently pursuing MSc in ESTEEM at University of Notre Dame. Specializing in GenAI, MedTech, and sustainable energy.">
+  <meta property="og:image" content="https://benhogan.dev/Photos/headshot.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://benhogan.dev/">
+  <meta property="twitter:title" content="Ben Hogan - Mechanical Engineer & ESTEEM Graduate Student">
+  <meta property="twitter:description" content="Mechanical Engineer (MEng) who graduated 1st in cohort at UCD, currently pursuing MSc in ESTEEM at University of Notre Dame. Specializing in GenAI, MedTech, and sustainable energy.">
+  <meta property="twitter:image" content="https://benhogan.dev/Photos/headshot.jpg">
+  
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
@@ -219,7 +31,7 @@
 
   <nav>
     <ul>
-      <li><a href="index.html">About</a></li>
+      <li><a href="index.html" class="active">About</a></li>
       <li><a href="education.html">Education</a></li>
       <li><a href="experience.html">Experience</a></li>
       <li><a href="leadership.html">Leadership & Social Impact</a></li>
@@ -229,24 +41,151 @@
   </nav>
 
   <main>
-    <img src="Photos/headshot.jpg" alt="Ben Hogan Headshot" class="headshot">
+    <img src="Photos/headshot.jpg" alt="Ben Hogan Headshot" class="headshot" onclick="openLightbox(this)">
     <div class="intro-card">
-      <h2>Welcome!</h2>
-      <p>Hi, I'm Ben Hogan — a Mechanical Engineer (MEng) who graduated 1st in my cohort at UCD, currently pursuing a MSc in ESTEEM at University of Notre Dame on a full scholarship through the Naughton Fellowship. I am currently researching how the power grid is changing due to the addition of data centres - if you have any insights I would love to chat!</p>
+      <h2 class="typewriter">Welcome!</h2>
+      <p class="fade-in-up">Hi, I'm Ben Hogan — a Mechanical Engineer (MEng) who graduated 1st in my cohort at UCD, currently pursuing a MSc in ESTEEM at University of Notre Dame on a full scholarship through the Naughton Fellowship. I am currently researching how the power grid is changing due to the addition of data centres - if you have any insights I would love to chat!</p>
       
-      <p>My recent work includes developing and validating a potential GenAI NLP pipeline to streamline user experiences in mHealth apps, which was sponsored by FoodMarble (Received A+, Highest grade in Cohort, Published ACDSA 2025).</p>
+      <p class="fade-in-up">My recent work includes developing and validating a potential GenAI NLP pipeline to streamline user experiences in mHealth apps, which was sponsored by FoodMarble (Received <strong>A+</strong>, <strong>Highest grade in Cohort</strong>, Published ACDSA 2025).</p>
       
-      <p>I also have experience in MedTech app development, large-scale civil engineering, and strong commitment to major fundraising efforts that have raised a combined €171,000 for healthcare charities. My leadership experience includes serving as Student President of Operation Smile Ireland, Head Boy of St. Gerard's School, and ESTEEM Class Rep to the Graduate Student Government at Notre Dame.</p>
+      <p class="fade-in-up">I also have experience in MedTech app development, large-scale civil engineering, and strong commitment to major fundraising efforts that have raised a combined <strong>€172,000</strong> for healthcare charities. My leadership experience includes serving as Student President of Operation Smile Ireland, Head Boy of St. Gerard's School, and ESTEEM Class Rep to the Graduate Student Government at Notre Dame.</p>
       
-      <p>Passionate about innovation and problem-solving, I thrive on challenges that require creativity and teamwork to drive real-world impact. Feel free to reach out if you'd like to connect or discuss opportunities to collaborate on impactful projects.</p>
+      <p class="fade-in-up">Passionate about innovation and problem-solving, I thrive on challenges that require creativity and teamwork to drive real-world impact. Feel free to reach out if you'd like to connect or discuss opportunities to collaborate on impactful projects.</p>
       
       <div class="contact-info">
         <h3>Contact</h3>
-        <p><strong>Phone:</strong> 0879449537 (Mobile)</p>
-        <p><strong>Email:</strong> Benjamin.hogan23@gmail.com</p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bhogan23" target="_blank">www.linkedin.com/in/bhogan23</a></p>
+        <div class="contact-details">
+          <p><strong>Phone:</strong> (574) 229-7753</p>
+          <p><strong>Email:</strong> Benjamin.hogan23@gmail.com</p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bhogan23" target="_blank">www.linkedin.com/in/bhogan23</a></p>
+        </div>
+        <a href="Benjamin_Hogan_Resume.pdf" class="cv-download">Download CV</a>
       </div>
     </div>
   </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <div class="contact-info">
+          <span>📞 (574) 229-7753</span>
+          <span>✉️ Benjamin.hogan23@gmail.com</span>
+          <span>💼 <a href="https://www.linkedin.com/in/bhogan23" target="_blank">LinkedIn</a></span>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="awards.html">Awards</a></li>
+          <li><a href="skills.html">Skills</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Ben Hogan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" onclick="scrollToTop()">↑</button>
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+  <script>
+    // Back to top functionality
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show/hide back to top button
+    window.addEventListener('scroll', function() {
+      const backToTop = document.querySelector('.back-to-top');
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    // Dark mode toggle functionality
+    function toggleTheme() {
+      const body = document.body;
+      const themeToggle = document.querySelector('.theme-toggle');
+      const currentTheme = body.getAttribute('data-theme');
+      
+      if (currentTheme === 'light') {
+        body.setAttribute('data-theme', 'dark');
+        themeToggle.textContent = '🌙';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.setAttribute('data-theme', 'light');
+        themeToggle.textContent = '☀️';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Load saved theme on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      const body = document.body;
+      const themeToggle = document.querySelector('.theme-toggle');
+      
+      body.setAttribute('data-theme', savedTheme);
+      themeToggle.textContent = savedTheme === 'light' ? '☀️' : '🌙';
+    });
+
+    // Universal Lightbox functionality
+    function openLightbox(img) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+      
+      // Prevent body scroll when lightbox is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.classList.remove('active');
+      
+      // Restore body scroll
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close lightbox when clicking on the background
+    document.addEventListener('DOMContentLoaded', function() {
+      const lightbox = document.getElementById('lightbox');
+      if (lightbox) {
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === this) {
+            closeLightbox();
+          }
+        });
+      }
+    });
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  </script>
 </body>
 </html>

@@ -4,240 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skills - Ben Hogan</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: linear-gradient(135deg, #c3cfe2 0%, #0f1419 50%, #1a2332 100%);
-      min-height: 100vh;
-      color: #e1e8f0;
-    }
-    
-    header {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      color: #fff;
-      padding: 2rem 0;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-    
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 300;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      background: rgba(30, 58, 95, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    nav ul li {
-      margin: 0;
-    }
-    
-    nav ul li a {
-      display: block;
-      padding: 1rem 1.5rem;
-      color: #e1e8f0;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-    
-    nav ul li a:hover {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      color: white;
-      transform: translateY(-2px);
-    }
-    
-    nav ul li a[href="skills.html"] {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      color: white;
-    }
-    
-    main {
-      padding: 3rem 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    
-    h2 {
-      margin-top: 2rem;
-      margin-bottom: 1.5rem;
-      color: #e1e8f0;
-      font-size: 2rem;
-      font-weight: 300;
-      text-align: center;
-      position: relative;
-      padding-bottom: 1rem;
-    }
-    
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      border-radius: 2px;
-    }
-    
-    .skill-category {
-      margin-bottom: 3rem;
-    }
-    
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    
-    .skill-item {
-      background: rgba(30, 58, 95, 0.8);
-      padding: 1.5rem;
-      border-radius: 15px;
-      border-left: 5px solid transparent;
-      background-clip: padding-box;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .skill-item::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-    
-    .skill-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-      border-left-color: #667eea;
-    }
-    
-    .skill-item:hover::before {
-      transform: scaleX(1);
-    }
-    
-    .skill-item h4 {
-      margin: 0 0 1rem 0;
-      color: #e1e8f0;
-      font-size: 1.2rem;
-      font-weight: 600;
-      position: relative;
-    }
-    
-    .skill-item h4::after {
-      content: '⚡';
-      position: absolute;
-      right: 0;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    
-    .skill-item:hover h4::after {
-      opacity: 1;
-    }
-    
-    .skill-item p {
-      margin: 0;
-      font-size: 0.95rem;
-      color: #b8c5d1;
-      line-height: 1.6;
-    }
-    
-    /* Category-specific colors */
-    .skill-category:nth-child(1) .skill-item {
-      border-left-color: #667eea;
-    }
-    
-    .skill-category:nth-child(2) .skill-item {
-      border-left-color: #f093fb;
-    }
-    
-    .skill-category:nth-child(3) .skill-item {
-      border-left-color: #4facfe;
-    }
-    
-    .skill-category:nth-child(4) .skill-item {
-      border-left-color: #43e97b;
-    }
-    
-    /* Responsive design */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      
-      nav ul {
-        flex-wrap: wrap;
-      }
-      
-      nav ul li a {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-      }
-      
-      main {
-        padding: 2rem 1rem;
-      }
-      
-      .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-      
-      h2 {
-        font-size: 1.5rem;
-      }
-    }
-    
-    /* Animation for page load */
-    .skill-item {
-      animation: fadeInUp 0.6s ease forwards;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    
-    .skill-item:nth-child(1) { animation-delay: 0.1s; }
-    .skill-item:nth-child(2) { animation-delay: 0.2s; }
-    .skill-item:nth-child(3) { animation-delay: 0.3s; }
-    .skill-item:nth-child(4) { animation-delay: 0.4s; }
-    .skill-item:nth-child(5) { animation-delay: 0.5s; }
-    .skill-item:nth-child(6) { animation-delay: 0.6s; }
-    
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
@@ -251,130 +18,208 @@
       <li><a href="experience.html">Experience</a></li>
       <li><a href="leadership.html">Leadership & Social Impact</a></li>
       <li><a href="awards.html">Awards & Recognition</a></li>
-      <li><a href="skills.html">Skills</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
     </ul>
   </nav>
 
-  <main>
+  <main class="skills">
     <div class="skill-category">
-      <h2>Technical Skills</h2>
-      <div class="skills-grid">
+      <div class="skill-category-header">
+        <h2>Technical Skills</h2>
+      </div>
+      <div class="skill-category-content">
+        <div class="skills-grid">
         <div class="skill-item">
-          <h4>Artificial Intelligence & Machine Learning</h4>
-          <p>Developed GenAI pipelines for health data extraction, evaluated multiple LLMs, and published research in international AI conferences</p>
+          <h4>🤖 Artificial Intelligence & Machine Learning</h4>
+          <p>GenAI, Prompt Engineering, Claude 3.5 Sonnet API, evaluated 15 LLMs, published research at ACDSA 2025</p>
         </div>
         <div class="skill-item">
-          <h4>Software Development</h4>
-          <p>Full-stack development including Android app development (10k+ downloads, 4.5 stars), web applications, and mobile interfaces</p>
+          <h4>💻 Software Development</h4>
+          <p>Python, Kotlin, GIT, Android Studio, JSON, full-stack development (10k+ downloads, 4.5 stars)</p>
         </div>
         <div class="skill-item">
-          <h4>Data Analytics & Visualization</h4>
-          <p>Built health analytics dashboards, data extraction from patient narratives, and comprehensive data analysis</p>
+          <h4>📊 Data Analytics & Visualization</h4>
+          <p>MATLAB, health analytics dashboards, data extraction from patient narratives, comprehensive data analysis</p>
         </div>
         <div class="skill-item">
-          <h4>Mechanical Engineering</h4>
-          <p>CAD design, roadway and public space configuration, housing development design, and engineering project management</p>
+          <h4>⚙️ Engineering Design</h4>
+          <p>CAD, Fusion 360, AutoCAD, SolidWorks, roadway configurations, housing development design</p>
         </div>
         <div class="skill-item">
-          <h4>Aerospace Engineering</h4>
-          <p>Study abroad specialization at University of Virginia with focus on aerospace systems and engineering principles</p>
+          <h4>🛠️ Software Tools & Platforms</h4>
+          <p>Microsoft Suite, Google Suite, Zoom, User Centered Design, collaborative development tools</p>
         </div>
         <div class="skill-item">
-          <h4>Business & Entrepreneurship</h4>
-          <p>Strategic consulting, business development, entrepreneurship studies, and technology commercialization</p>
+          <h4>🚀 Aerospace Engineering</h4>
+          <p>University of Virginia study abroad specialization, aerospace systems and engineering principles</p>
         </div>
       </div>
     </div>
 
     <div class="skill-category">
-      <h2>Leadership & Communication</h2>
-      <div class="skills-grid">
+      <div class="skill-category-header">
+        <h2>Soft Skills</h2>
+      </div>
+      <div class="skill-category-content">
+        <div class="skills-grid">
         <div class="skill-item">
-          <h4>Public Speaking</h4>
-          <p>Delivered 9+ public speeches to audiences of 1,500+, represented Ireland internationally at ISLC conferences</p>
+          <h4>🎤 Public Speaking</h4>
+          <p>Delivered 9+ speeches to audiences of 1,500+, represented Ireland internationally at ISLC conferences</p>
         </div>
         <div class="skill-item">
-          <h4>Team Leadership</h4>
-          <p>Led teams of 20+ members in international cycling events, managed staff operations, and coordinated large-scale projects</p>
+          <h4>👥 Leadership</h4>
+          <p>Led teams of 20+ members, managed 18 staff, Head Boy, class representative, coordinated large-scale projects</p>
         </div>
         <div class="skill-item">
-          <h4>Project Management</h4>
-          <p>Organized fundraising campaigns, managed development projects, and coordinated multi-stakeholder initiatives</p>
+          <h4>📋 Project Management</h4>
+          <p>Organized fundraising campaigns, managed development projects, coordinated multi-stakeholder initiatives</p>
         </div>
         <div class="skill-item">
-          <h4>Event Management</h4>
-          <p>Organized major school events, graduations, ceremonies, and large-scale fundraising events</p>
+          <h4>🧩 Problem Solving</h4>
+          <p>Developed innovative solutions for health data extraction, sustainable energy storage, engineering challenges</p>
         </div>
         <div class="skill-item">
-          <h4>International Collaboration</h4>
-          <p>Worked with international teams across Ireland, Uganda, Italy, and North Carolina on various projects</p>
+          <h4>🌍 International Collaboration</h4>
+          <p>Worked with teams across Ireland, Uganda, Italy, North Carolina, diverse cultural environments</p>
         </div>
         <div class="skill-item">
-          <h4>Student Representation</h4>
-          <p>Elected class representative, served as Head Boy, and represented student interests at institutional level</p>
+          <h4>❤️ Social Impact</h4>
+          <p>Raised €172,000+ for charities (Lumule Foundation, 100 Minds Program, UCD Engineering Society, Operation Smile)</p>
         </div>
       </div>
     </div>
 
     <div class="skill-category">
-      <h2>Industry Experience</h2>
-      <div class="skills-grid">
-        <div class="skill-item">
-          <h4>Software Engineering</h4>
-          <p>6-month internship at FoodMarble developing GenAI features and contributing to Android app launch</p>
-        </div>
-        <div class="skill-item">
-          <h4>Strategic Consulting</h4>
-          <p>Graduate student consultant at Energy Vault focusing on sustainable energy storage innovation</p>
-        </div>
-        <div class="skill-item">
-          <h4>Civil Engineering</h4>
-          <p>Summer internship at Cairn Homes designing roadway configurations for 241-unit housing development</p>
-        </div>
-        <div class="skill-item">
-          <h4>Hospitality Management</h4>
-          <p>2+ years as Bar Manager at Feast Catering overseeing operations and staff for large-scale events</p>
-        </div>
-        <div class="skill-item">
-          <h4>Research & Development</h4>
-          <p>Conducted thesis research sponsored by FoodMarble, achieved highest grade in cohort (A+)</p>
-        </div>
-        <div class="skill-item">
-          <h4>Academic Excellence</h4>
-          <p>Ranked 1st in MEng cohort, graduated with highest academic standing, and maintained top-tier performance</p>
-        </div>
+      <div class="skill-category-header">
+        <h2>Business Skills</h2>
       </div>
-    </div>
-
-    <div class="skill-category">
-      <h2>Soft Skills & Achievements</h2>
-      <div class="skills-grid">
+      <div class="skill-category-content">
+        <div class="skills-grid">
         <div class="skill-item">
-          <h4>Fundraising & Social Impact</h4>
-          <p>Raised €71,000+ for various charities, organized awareness campaigns, and enabled 11 life-changing surgeries</p>
+          <h4>💼 Strategic Consulting</h4>
+          <p>Energy Vault graduate consultant, interviewed 50+ stakeholders, researched Power Grids and Data Centers</p>
         </div>
         <div class="skill-item">
-          <h4>Problem Solving</h4>
-          <p>Developed innovative solutions for health data extraction, sustainable energy storage, and engineering challenges</p>
+          <h4>🤝 Client Engagement</h4>
+          <p>Strategic thinking, cross-functional collaboration, stakeholder management, business development</p>
         </div>
         <div class="skill-item">
-          <h4>Adaptability</h4>
-          <p>Successfully navigated international study programs, diverse work environments, and multidisciplinary projects</p>
+          <h4>🏢 Industry Experience</h4>
+          <p>FoodMarble software engineering intern, Cairn Homes civil engineering intern, Feast Catering management</p>
         </div>
         <div class="skill-item">
-          <h4>Communication</h4>
-          <p>Effective communication across cultures, technical and non-technical audiences, and diverse stakeholder groups</p>
+          <h4>🎓 Academic Excellence</h4>
+          <p>Ranked 1st in MEng cohort, A+ thesis grade, EGA Gold Medal, Naughton Fellowship recipient</p>
         </div>
         <div class="skill-item">
-          <h4>Time Management</h4>
-          <p>Balanced dual Master's programs, internships, leadership roles, and extracurricular activities</p>
+          <h4>🔬 Research & Development</h4>
+          <p>FoodMarble-sponsored thesis research, product pilot integration, technology commercialization</p>
         </div>
         <div class="skill-item">
-          <h4>Innovation & Creativity</h4>
-          <p>Developed novel GenAI applications, created personalized health solutions, and designed innovative engineering solutions</p>
+          <h4>⚡ Innovation</h4>
+          <p>Developed novel GenAI applications, created personalized health solutions, designed engineering solutions</p>
         </div>
       </div>
     </div>
   </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <div class="contact-info">
+          <span>📞 (574) 229-7753</span>
+          <span>✉️ Benjamin.hogan23@gmail.com</span>
+          <span>💼 <a href="https://www.linkedin.com/in/bhogan23" target="_blank">LinkedIn</a></span>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="awards.html">Awards</a></li>
+          <li><a href="skills.html">Skills</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Ben Hogan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+  <script>
+    // Back to top functionality
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show/hide back to top button
+    window.addEventListener('scroll', function() {
+      const backToTop = document.querySelector('.back-to-top');
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    // Skills page specific functionality (if needed)
+    // Accordion functionality removed - using static layout
+
+    // Universal Lightbox functionality
+    function openLightbox(img) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+      
+      // Prevent body scroll when lightbox is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.classList.remove('active');
+      
+      // Restore body scroll
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close lightbox when clicking on the background
+    document.addEventListener('DOMContentLoaded', function() {
+      const lightbox = document.getElementById('lightbox');
+      if (lightbox) {
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === this) {
+            closeLightbox();
+          }
+        });
+      }
+    });
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  </script>
 </body>
 </html>

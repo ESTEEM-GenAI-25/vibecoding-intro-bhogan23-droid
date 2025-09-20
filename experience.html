@@ -4,222 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience - Ben Hogan</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: linear-gradient(135deg, #c3cfe2 0%, #0f1419 50%, #1a2332 100%);
-      min-height: 100vh;
-      color: #e1e8f0;
-    }
-    
-    header {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      color: #fff;
-      padding: 2rem 0;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-    
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 300;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      background: rgba(30, 58, 95, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    nav ul li {
-      margin: 0;
-    }
-    
-    nav ul li a {
-      display: block;
-      padding: 1rem 1.5rem;
-      color: #e1e8f0;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-    
-    nav ul li a:hover {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      color: white;
-      transform: translateY(-2px);
-    }
-    
-    nav ul li a[href="experience.html"] {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      color: white;
-    }
-    
-    main {
-      padding: 3rem 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    
-    .job {
-      margin-bottom: 3rem;
-      background: rgba(30, 58, 95, 0.8);
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.2);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .job::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-    
-    .job:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    }
-    
-    .job:hover::before {
-      transform: scaleX(1);
-    }
-    
-    .job h2 {
-      margin: 0 0 0.5rem 0;
-      color: #e1e8f0;
-      font-size: 1.6rem;
-      font-weight: 600;
-      position: relative;
-    }
-    
-    .job h2::after {
-      content: '💼';
-      position: absolute;
-      right: 0;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    
-    .job:hover h2::after {
-      opacity: 1;
-    }
-    
-    .job h3 {
-      margin: 0 0 1rem 0;
-      color: #4a9eff;
-      font-size: 1.1rem;
-      font-weight: 500;
-    }
-    
-    .job p {
-      margin: 0.8rem 0;
-      color: #b8c5d1;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-    
-    .job img {
-      float: right;
-      margin: 0 0 1rem 2rem;
-      width: 420px;
-      height: auto;
-      border-radius: 15px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-      transition: all 0.3s ease;
-      border: 4px solid rgba(255,255,255,0.9);
-    }
-    
-    .job img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
-    }
-    
-    /* Responsive design */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      
-      nav ul {
-        flex-wrap: wrap;
-      }
-      
-      nav ul li a {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-      }
-      
-      main {
-        padding: 2rem 1rem;
-      }
-      
-      .job {
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-      }
-      
-      .job img {
-        float: none;
-        display: block;
-        margin: 1rem auto 1.5rem auto;
-        width: 320px;
-      }
-      
-      .job h2 {
-        font-size: 1.4rem;
-      }
-      
-      .job h3 {
-        font-size: 1rem;
-      }
-    }
-    
-    /* Animation for page load */
-    .job {
-      animation: fadeInUp 0.6s ease forwards;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    
-    .job:nth-child(1) { animation-delay: 0.1s; }
-    .job:nth-child(2) { animation-delay: 0.2s; }
-    .job:nth-child(3) { animation-delay: 0.3s; }
-    .job:nth-child(4) { animation-delay: 0.4s; }
-    .job:nth-child(5) { animation-delay: 0.5s; }
-    
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
@@ -230,49 +15,228 @@
     <ul>
       <li><a href="index.html">About</a></li>
       <li><a href="education.html">Education</a></li>
-      <li><a href="experience.html">Experience</a></li>
+      <li><a href="experience.html" class="active">Experience</a></li>
       <li><a href="leadership.html">Leadership & Social Impact</a></li>
       <li><a href="awards.html">Awards & Recognition</a></li>
       <li><a href="skills.html">Skills</a></li>
     </ul>
   </nav>
 
-  <main>
-    <div class="job">
-	  <h2>Graduate Student Strategy Consultant</h2>
-	  <h3>Energy Vault – Westlake Village, CA | July 2025 – Present</h3>
-	  <img src="Photos/energyvault.png" alt="Energy Vault Project">
-	  <p>Consulting project focusing on strategic innovation in sustainable energy storage.</p>
-	</div>
+  <main class="experience">
+    <div class="experience-container">
+      <!-- Energy Vault -->
+      <div class="experience-item">
+        <div class="company-header">
+          <h2>Energy Vault</h2>
+          <div class="location-date">Westlake Village, CA</div>
+        </div>
+        <div class="position-section">
+          <div class="position-header">
+            <h3><strong>Graduate Student Strategy Consultant</strong></h3>
+            <div class="position-date">July 2025 – Present</div>
+          </div>
+          <div class="position-content">
+            <div class="position-text">
+              <ul class="achievements">
+                <li>Interviewing 50+ key stakeholders to research the evolving needs of Power Grids and Data Centers</li>
+              </ul>
+            </div>
+            <img src="Photos/energyvault.png" alt="Energy Vault Project" class="position-photo" onclick="openLightbox(this)">
+          </div>
+        </div>
+      </div>
 
-    <div class="job">
-      <h2>Thesis Project (Sponsored by FoodMarble)</h2>
-      <h3>University College Dublin – Dec 2024 – May 2025</h3>
-      <img src="Photos/thesis.png" alt="Thesis Project">
-      <p>Developed and validated a proof-of-concept GenAI pipeline to automate health data extraction from patient narratives.</p>
-      <p>Generated datasets, evaluated multiple LLMs, and achieved the highest grade in cohort (A+). Published in an international AI conference.</p>
-    </div>
+      <!-- University College Dublin Thesis -->
+      <div class="experience-item">
+        <div class="company-header">
+          <h2>University College Dublin</h2>
+          <div class="location-date">Dublin, Ireland</div>
+        </div>
+        <div class="position-section">
+          <div class="position-header">
+            <h3><strong>Thesis Project (Sponsored by FoodMarble)</strong></h3>
+            <div class="position-date">Dec 2024 – May 2025</div>
+          </div>
+          <div class="position-content">
+            <div class="position-text">
+              <ul class="achievements">
+                <li>Developed and validated a proof-of-concept GenAI Pipeline to automate health data extraction from free-text and spoken patient narratives to streamline self-reporting and boost engagement in Remote Patient Monitoring and mHealth apps</li>
+                <li>Evaluated 15 Top LLMs across a dataset of 100 synthetically generated Patient Narratives on 6 key performance criteria</li>
+                <li>Awarded <strong>Highest Grade</strong> in cohort (A+) and Presented at <strong>International AI Conference</strong> (ACDSA 2025)</li>
+                <li>Secured a product pilot with FoodMarble, undergoing end-to-end integration tests ahead of app deployment</li>
+              </ul>
+            </div>
+            <img src="Photos/thesis.png" alt="Thesis Project" class="position-photo" onclick="openLightbox(this)">
+          </div>
+        </div>
+      </div>
 
-    <div class="job">
-      <h2>Software Engineering Intern</h2>
-      <h3>FoodMarble – Dublin, Ireland | Jun 2024 – Dec 2024</h3>
-      <img src="Photos/foodmarble.png" alt="FoodMarble Project">
-      <p>Developed and deployed a GenAI app feature offering personalized food alternatives for intolerances.</p>
-      <p>Interviewed power users, built a health analytics dashboard, and contributed to the Android app launch (10k+ downloads, 4.5 stars).</p>
-    </div>
+      <!-- FoodMarble -->
+      <div class="experience-item">
+        <div class="company-header">
+          <h2>FoodMarble</h2>
+          <div class="location-date">Dublin, Ireland</div>
+        </div>
+        <div class="position-section">
+          <div class="position-header">
+            <h3><strong>Software Engineering Intern</strong></h3>
+            <div class="position-date">Jun 2024 – Dec 2024</div>
+          </div>
+          <div class="position-content">
+            <div class="position-text">
+              <ul class="achievements">
+                <li>Developed, validated, and deployed the "FODMAP Swaps" project, a Gen AI app feature leveraging the <em>Claude 3.5 Sonnet API</em> to offer personalized alternatives for 2000+ foods to users with food intolerances – currently live in the FoodMarble App</li>
+                <li>Interviewed 30+ power users to develop and deploy a new health analytics dashboard in the Android app</li>
+                <li>Contributed key features and bug fixes during testing and global launch of new Android App (<strong>10k+ downloads, 4.5 stars</strong>)</li>
+              </ul>
+            </div>
+            <img src="Photos/foodmarble.png" alt="FoodMarble Project" class="position-photo" onclick="openLightbox(this)">
+          </div>
+        </div>
+      </div>
 
-    <div class="job">
-      <h2>Civil Engineering Intern</h2>
-      <h3>Cairn Homes – Wicklow, Ireland | Jun 2021 – Aug 2021</h3>
-      <img src="Photos/cairn.png" alt="Cairn Homes Project">
-      <p>Designed roadway and public space configurations using CAD for a 241-unit housing development.</p>
-    </div>
+      <!-- Cairn Homes -->
+      <div class="experience-item">
+        <div class="company-header">
+          <h2>Cairn Homes</h2>
+          <div class="location-date">Wicklow, Ireland</div>
+        </div>
+        <div class="position-section">
+          <div class="position-header">
+            <h3><strong>Civil Engineering Intern</strong></h3>
+            <div class="position-date">Jun 2021 – Aug 2021</div>
+          </div>
+          <div class="position-content">
+            <div class="position-text">
+              <ul class="achievements">
+                <li>Designed 12 cost-effective roadway & public space layout configurations using CAD for a 241-unit housing development</li>
+                <li>Shadowed site engineers, gaining cross-functional insights into project management within a €1.5 Billion PLC</li>
+              </ul>
+            </div>
+            <img src="Photos/cairn.png" alt="Cairn Homes Project" class="position-photo" onclick="openLightbox(this)">
+          </div>
+        </div>
+      </div>
 
-    <div class="job">
-      <h2>Bar Manager</h2>
-      <h3>Feast Catering – Wicklow, Ireland | May 2022 – Jun 2024</h3>
-      <p>Oversaw bar operations, managed staff, and delivered exceptional service for large-scale events.</p>
+      <!-- Feast Catering -->
+      <div class="experience-item">
+        <div class="company-header">
+          <h2>Feast Catering</h2>
+          <div class="location-date">Wicklow, Ireland</div>
+        </div>
+        <div class="position-section">
+          <div class="position-header">
+            <h3><strong>Bar Manager</strong></h3>
+            <div class="position-date">May 2022 – Jun 2024</div>
+          </div>
+          <div class="position-content">
+            <div class="position-text">
+              <ul class="achievements">
+                <li>Advanced from Bartender to Manager, showing <strong>leadership</strong> by training and overseeing a team of 18 staff</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="awards.html">Awards</a></li>
+          <li><a href="skills.html">Skills</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <div class="contact-info">
+          <span>📞 (574) 229-7753</span>
+          <span>✉️ Benjamin.hogan23@gmail.com</span>
+          <span>💼 <a href="https://www.linkedin.com/in/bhogan23" target="_blank">LinkedIn</a></span>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Ben Hogan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+  <script>
+    // Back to top functionality
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show/hide back to top button
+    window.addEventListener('scroll', function() {
+      const backToTop = document.querySelector('.back-to-top');
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    // Universal Lightbox functionality
+    function openLightbox(img) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+      
+      // Prevent body scroll when lightbox is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.classList.remove('active');
+      
+      // Restore body scroll
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close lightbox when clicking on the background
+    document.addEventListener('DOMContentLoaded', function() {
+      const lightbox = document.getElementById('lightbox');
+      if (lightbox) {
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === this) {
+            closeLightbox();
+          }
+        });
+      }
+    });
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  </script>
 </body>
 </html>

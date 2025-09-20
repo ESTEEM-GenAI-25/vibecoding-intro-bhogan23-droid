@@ -4,210 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leadership & Social Impact - Ben Hogan</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: linear-gradient(135deg, #c3cfe2 0%, #0f1419 50%, #1a2332 100%);
-      min-height: 100vh;
-      color: #e1e8f0;
-    }
-    
-    header {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      color: #fff;
-      padding: 2rem 0;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-    
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 300;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      background: rgba(30, 58, 95, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    nav ul li {
-      margin: 0;
-    }
-    
-    nav ul li a {
-      display: block;
-      padding: 1rem 1.5rem;
-      color: #e1e8f0;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-    
-    nav ul li a:hover {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      color: white;
-      transform: translateY(-2px);
-    }
-    
-    nav ul li a[href="leadership.html"] {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      color: white;
-    }
-    
-    main {
-      padding: 3rem 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    
-    .section {
-      margin-bottom: 3rem;
-      background: rgba(30, 58, 95, 0.8);
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.2);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 100%);
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-    
-    .section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    }
-    
-    .section:hover::before {
-      transform: scaleX(1);
-    }
-    
-    .section h2 {
-      margin: 0 0 1rem 0;
-      color: #e1e8f0;
-      font-size: 1.8rem;
-      font-weight: 600;
-      position: relative;
-    }
-    
-    .section h2::after {
-      content: '🌟';
-      position: absolute;
-      right: 0;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    
-    .section:hover h2::after {
-      opacity: 1;
-    }
-    
-    .section p {
-      margin: 0.8rem 0;
-      color: #b8c5d1;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-    
-    .section img {
-      float: right;
-      margin: 0 0 1rem 2rem;
-      width: 450px;
-      height: auto;
-      border-radius: 15px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-      transition: all 0.3s ease;
-      border: 4px solid rgba(255,255,255,0.9);
-    }
-    
-    .section img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
-    }
-    
-    /* Responsive design */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      
-      nav ul {
-        flex-wrap: wrap;
-      }
-      
-      nav ul li a {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-      }
-      
-      main {
-        padding: 2rem 1rem;
-      }
-      
-      .section {
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-      }
-      
-      .section img {
-        float: none;
-        display: block;
-        margin: 1rem auto 1.5rem auto;
-        width: 350px;
-      }
-      
-      .section h2 {
-        font-size: 1.5rem;
-      }
-    }
-    
-    /* Animation for page load */
-    .section {
-      animation: fadeInUp 0.6s ease forwards;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    
-    .section:nth-child(1) { animation-delay: 0.1s; }
-    .section:nth-child(2) { animation-delay: 0.2s; }
-    .section:nth-child(3) { animation-delay: 0.3s; }
-    .section:nth-child(4) { animation-delay: 0.4s; }
-    
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
@@ -219,40 +16,140 @@
       <li><a href="index.html">About</a></li>
       <li><a href="education.html">Education</a></li>
       <li><a href="experience.html">Experience</a></li>
-      <li><a href="leadership.html">Leadership & Social Impact</a></li>
+      <li><a href="leadership.html" class="active">Leadership & Social Impact</a></li>
       <li><a href="awards.html">Awards & Recognition</a></li>
       <li><a href="skills.html">Skills</a></li>
     </ul>
   </nav>
 
-  <main>
+  <main class="leadership">
     <div class="section">
       <h2>Lumule Foundation</h2>
-      <img src="Photos/lumule.png" alt="Lumule Foundation">
+      <div class="photo-grid">
+        <img src="Photos/Lumule1.jpg" alt="Lumule Cycling Event" onclick="openLightbox(this)">
+        <img src="Photos/Lumule2.jpg" alt="Lumule Community Interaction" onclick="openLightbox(this)">
+        <img src="Photos/Lumule3.jpg" alt="Lumule Cyclist Portrait" onclick="openLightbox(this)">
+        <img src="Photos/lumule4.jpg" alt="Lumule Fundraising Event" onclick="openLightbox(this)">
+        <img src="Photos/marathon1.jpg" alt="Marathon Start Line" onclick="openLightbox(this)">
+        <img src="Photos/marathon2.jpg" alt="Marathon Medal" onclick="openLightbox(this)">
+      </div>
+      
       <p>Collaborated with the Lumule Foundation, Kyne Foundation and a team of 20 Ugandan + Irish cyclists to raise €71,000 for a Hospital in Lumule, Uganda.</p>
       <p>Completed the Uganda 2025 Cycle from Jinja to Kitgum (600km) and ran the Rome Marathon to support fundraising efforts.</p>
     </div>
 
     <div class="section">
       <h2>Pieta House with UCD Eng Soc</h2>
-      <img src="Photos/boxing.png" alt="Boxing Fundraiser">
+      <img src="Photos/boxing.png" alt="Boxing Fundraiser" onclick="openLightbox(this)">
       <p>Boxed in UCD Engineering Society’s Fight Night fundraiser, contributing to €12,377 raised (doubling the original target of €6,000) for Pieta House, a mental health and suicide prevention charity.</p>
     </div>
 
     <div class="section">
       <h2>Temple Street Children’s Hospital / 100 Minds Program</h2>
-      <img src="Photos/100minds.png" alt="100 Minds Program">
+      <img src="Photos/100minds.png" alt="100 Minds Program" onclick="openLightbox(this)">
       <p>Selected as one of Ireland’s “best and brightest students” for the 100 Minds initiative.</p>
-      <p>Raised €1,400+ as part of €85,000 for Temple Street Children’s Hospital while developing project management, fundraising, and communication skills.</p>
+      <p>Raised €1,400+ as part of €85,000 for Temple Street Children's Hospital while developing project management, fundraising, and communication skills.</p>
     </div>
 
     <div class="section">
       <h2>Operation Smile</h2>
-      <img src="Photos/opsmile.png" alt="Operation Smile">
+      <img src="Photos/opsmile.png" alt="Operation Smile" onclick="openLightbox(this)">
       <p>Awarded the Logan Taylor Award for raising over €2,500, funding 11 cleft palate surgeries through self-organised events.</p>
       <p>Represented Ireland as Student President at ISLC conferences in Rome (2017) and North Carolina (2019).</p>
       <p>Delivered 9 public speeches to audiences of 1,500+ and spearheaded awareness campaigns for cleft palate surgeries.</p>
     </div>
   </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="awards.html">Awards</a></li>
+          <li><a href="skills.html">Skills</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <div class="contact-info">
+          <span>📞 (574) 229-7753</span>
+          <span>✉️ Benjamin.hogan23@gmail.com</span>
+          <span>💼 <a href="https://www.linkedin.com/in/bhogan23" target="_blank">LinkedIn</a></span>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Ben Hogan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+  <script>
+    // Back to top functionality
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show/hide back to top button
+    window.addEventListener('scroll', function() {
+      const backToTop = document.querySelector('.back-to-top');
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    // Lightbox functionality
+    function openLightbox(img) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+      
+      // Prevent body scroll when lightbox is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.classList.remove('active');
+      
+      // Restore body scroll
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close lightbox when clicking on the background
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeLightbox();
+      }
+    });
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  </script>
 </body>
 </html>
